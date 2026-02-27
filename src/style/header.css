@@ -1,0 +1,85 @@
+header { 
+    width: 100%;
+    padding: 15px 8%; /* Diminuí um pouco o padding para o menu ficar mais fino ao rolar */
+    position: fixed;  /* Faz o menu ficar parado no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;    /* Garante que o menu fique por cima de tudo */
+    background-color: rgba(255, 249, 234, 0.8); /* Cor do seu fundo com 80% de transparência */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no que está atrás (estilo Apple) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav_logo{
+    font-size: 24px;
+    color: #e9a209;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;   
+}
+
+.nav-item.active a{
+    color: #1d1d1d;
+    border-bottom: 3px solid #ffe100;
+}
+
+#mobile_btn{
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+    
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        text-align: center;
+        list-style: none;
+
+    }
+
+
+}

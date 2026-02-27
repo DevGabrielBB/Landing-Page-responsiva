@@ -1,0 +1,125 @@
+#home {  
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px; /* Espaço para o menu fixo não cobrir o título */
+    position: relative;
+    overflow: hidden;
+}
+
+#cta {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    z-index: 2;
+}
+
+#cta .title {
+    font-size: 4rem;
+    color: #1d1d1d;
+}
+
+#cta .title span {
+    color: #e9a209;
+}
+
+#cta .description {
+    font-size: 1.2rem;
+    color: #444; /* Um cinza escuro elegante */
+    line-height: 1.6; /* Dá um respiro melhor para a leitura */
+    max-width: 500px; /* Impede que o texto fique largo demais */
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+#learn-more-default {
+    display: flex;
+    gap: 8px;
+    align-items: center;  
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#learn-more-default button {
+    box-shadow: none;
+}
+
+#banner {
+    width: 50%; /* Ocupa a outra metade da tela */
+    display: flex;
+    align-items: center;    /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente na área laranja */
+    z-index: 2;
+}
+
+#banner img{
+    width: 85%;       /* Faz a imagem ocupar a largura do container banner */
+    max-width: 550px;  /* Define um tamanho máximo para não ficar gigante */
+    height: auto;      /* Mantém a proporção da imagem */
+    filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.15)); /* Adiciona uma sombra suave para dar profundidade */
+}
+
+.shape {
+    background-color: #ffe8b4;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home {
+        flex-direction: column; /* Empilha o texto e a imagem */
+        text-align: center;
+        padding-top: 120px; /* Dá espaço para o menu fixo */
+        min-height: auto;
+    }
+
+    #cta {
+        width: 100%;
+        align-items: center;
+    }
+
+    #cta .title {
+        font-size: 2.2rem; /* Tamanho ideal para celular */
+        line-height: 1.2;
+    }
+
+    #cta .description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    #banner {
+        width: 100%;
+        display: flex; /* Garante que a imagem APAREÇA no celular */
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    #banner img {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .shape {
+        display: none; /* Remove o fundo laranja irregular no mobile para não bugar o layout */
+    }
+}
