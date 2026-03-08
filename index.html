@@ -79,8 +79,24 @@
       color:#fff; text-align:center; padding:10px 16px;
       font-size:.82rem; font-weight:600; letter-spacing:.5px;
       margin-top:60px;
+      position: relative; z-index: 999;
     }
     .announce-bar span { color: var(--amber-lt); }
+
+    @media (max-width: 600px) {
+      .announce-bar {
+        margin-top: 68px;
+        font-size: .78rem;
+        padding: 10px 12px;
+        line-height: 1.5;
+      }
+      .header-cta {
+        font-size: .72rem;
+        padding: 8px 12px;
+        letter-spacing: 0;
+      }
+      .logo { font-size: 1.1rem; }
+    }
 
     /* ── HERO ── */
     #hero {
