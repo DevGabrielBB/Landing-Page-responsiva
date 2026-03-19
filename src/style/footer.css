@@ -1,0 +1,38 @@
+footer {
+    background: var(--dark);
+    color: #888;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+footer p {
+    font-size: .78rem;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    color: var(--amber);
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.disclaimer {
+    font-size: .7rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
